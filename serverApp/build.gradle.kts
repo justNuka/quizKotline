@@ -1,18 +1,14 @@
-val ktor_version: String by project
-val kotlin_version: String by project
-val logback_version: String by project
 
 plugins {
-    kotlin("jvm") version "1.9.20"
     id("io.ktor.plugin") version "2.3.6"
+    application
 }
 
 group = "com.example"
 version = "0.0.1"
 
 application {
-    mainClass.set("com.example.ApplicationKt")
-
+    mainClass.set("kotlin.com.example.ApplicationKt")
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
@@ -24,7 +20,7 @@ repositories {
 dependencies {
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-netty-jvm")
-    implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation("ch.qos.logback:logback-classic:1.4.11")
     testImplementation("io.ktor:ktor-server-tests-jvm")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.9.20")
 }
