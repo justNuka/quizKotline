@@ -2,7 +2,8 @@
 import moe.tlaster.precompose.PreComposeApplication
 import platform.UIKit.UIViewController
 
-actual fun getPlatformName(): String = "iOS"
+//actual fun getPlatformName(): String = "iOS"
+fun getPlatformName(): String = "iOS"
 
 //fun MainViewController() = ComposeUIViewController {
     //App()

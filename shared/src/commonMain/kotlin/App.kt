@@ -13,4 +13,4 @@ internal fun App() {
     }
 }
 
-expect fun getPlatformName(): String
+//expect fun getPlatformName(): String

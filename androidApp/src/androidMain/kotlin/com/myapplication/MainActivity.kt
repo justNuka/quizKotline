@@ -11,7 +11,7 @@ class MainActivity : PreComposeActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            AndroidApp()
+            MainView()
         }
     }
 }
