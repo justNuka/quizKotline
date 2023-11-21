@@ -12,9 +12,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import moe.tlaster.precompose.navigation.Navigator
 
 @Composable
-internal fun welcomeScreen(){
+internal fun welcomeScreen(navigator: Navigator){
 
     Box(
         contentAlignment = Alignment.Center,
