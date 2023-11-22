@@ -85,7 +85,7 @@ internal fun questionScreen(navigator: Navigator, questions: List<Question>) {
                         selectedAnswer = 1
                     }else{
                         // Go to the score section
-                        navigator.navigate(route = "/score/$score out of ${questions.size}")
+                        navigator.navigate("/score/$score out of ${questions.size}")
                     }
                 }
             ) {

@@ -14,8 +14,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import moe.tlaster.precompose.navigation.Navigator
 
-@Composable
-internal fun welcomeScreen(navigator: Navigator){
+@Composable()
+internal fun welcomeScreen(navigator: Navigator) {
 
     Box(
         contentAlignment = Alignment.Center,
@@ -36,14 +36,14 @@ internal fun welcomeScreen(navigator: Navigator){
                     )
                     Text(
                         modifier = Modifier.padding(all = 10.dp),
-                        text = "Je suis un quiz",
+                        text = "A simple Quiz to discovers KMP and compose.",
                     )
                     Button(
                         modifier = Modifier.padding(all = 10.dp),
                         onClick = { navigator.navigate(route = "/quiz") }
 
                     ) {
-                        Text("Commencer le quiz")
+                        Text("Start the Quiz")
                     }
                 }
             }
