@@ -1,3 +1,6 @@
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -5,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
@@ -23,6 +27,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -38,13 +43,14 @@ internal fun questionScreen(navigator: Navigator, questions: List<Question>) {
     var score by remember { mutableStateOf(0) }
 
     Column(
-        modifier = Modifier.fillMaxWidth().fillMaxHeight(),
+        modifier = Modifier.fillMaxWidth().fillMaxHeight().background(Color.LightGray),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Card(
-            shape = RoundedCornerShape(5.dp),
+            shape = RoundedCornerShape(15.dp),
             modifier = Modifier.padding(60.dp)
+                .border(shape = RoundedCornerShape(15.dp), color = Color.Black, width = 1.dp)
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -60,45 +66,75 @@ internal fun questionScreen(navigator: Navigator, questions: List<Question>) {
         }
         Column(modifier = Modifier.selectableGroup()) {
             questions[questionProgress].answers.forEach { answer ->
-                Row(
-                    modifier = Modifier.padding(horizontal = 16.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    RadioButton(
-                        modifier = Modifier.padding(end = 16.dp),
-                        selected = (selectedAnswer == answer.id),
-                        onClick = { selectedAnswer = answer.id },
+                Card(
+                    shape = RoundedCornerShape(15.dp),
+                    modifier = Modifier
+                        .padding(horizontal = 16.dp, vertical = 5.dp)
+                        .border(
+                        shape = RoundedCornerShape(15.dp),
+                        color = Color.Black,
+                        width = 1.dp
                     )
-                    Text(text = answer.label)
+                        .background(Color.LightGray)
+                        .width(400.dp)
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 16.dp)
+                            .clickable { selectedAnswer = answer.id }
+                            .width(400.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+
+                        ) {
+
+                        RadioButton(
+                            modifier = Modifier.padding(end = 16.dp),
+                            selected = (selectedAnswer == answer.id),
+                            onClick = { selectedAnswer = answer.id }
+                        )
+                        Text(text = answer.label)
+                    }
+
                 }
             }
         }
-        Column(modifier = Modifier.fillMaxHeight(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Bottom) {
+        Column(
+            modifier = Modifier.fillMaxHeight(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Bottom
+        ) {
             Button(
                 modifier = Modifier.padding(bottom = 20.dp),
+                shape = RoundedCornerShape(15.dp),
                 onClick = {
-                    if(selectedAnswer == questions[questionProgress].correctAnswerId) {
+                    if (selectedAnswer == questions[questionProgress].correctAnswerId) {
                         score++
                     }
                     if (questionProgress < questions.size - 1) {
                         questionProgress++
                         selectedAnswer = 1
-                    }else{
+                    } else {
                         // Go to the score section
                         navigator.navigate("/score/$score out of ${questions.size}")
                     }
                 }
             ) {
-                if(questionProgress < questions.size - 1) nextOrDoneButton(Icons.Filled.ArrowForward,"Next")
-                else nextOrDoneButton(Icons.Filled.Done,"Done")
+                if (questionProgress < questions.size - 1) nextOrDoneButton(
+                    Icons.Filled.ArrowForward,
+                    "Next"
+                )
+                else nextOrDoneButton(Icons.Filled.Done, "Done")
             }
-            LinearProgressIndicator(modifier = Modifier.fillMaxWidth().height(20.dp), progress = questionProgress.div(questions.size.toFloat()).plus(1.div(questions.size.toFloat())))
+            LinearProgressIndicator(
+                modifier = Modifier.fillMaxWidth().height(20.dp),
+                progress = questionProgress.div(questions.size.toFloat())
+                    .plus(1.div(questions.size.toFloat()))
+            )
         }
     }
 }
 
 @Composable
-internal fun nextOrDoneButton(iv: ImageVector, label:String){
+internal fun nextOrDoneButton(iv: ImageVector, label: String) {
     Icon(
         iv,
         contentDescription = "Localized description",
