@@ -38,6 +38,7 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3") // For making asynchronous calls
                 implementation("io.ktor:ktor-client-content-negotiation:2.3.4") // Simplify handling of content type based deserialization
                 implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.4") // make your dataclasses serializable
+                implementation("com.squareup.sqldelight:runtime:1.5.5") // For database
                 api("moe.tlaster:precompose:1.5.7")
 
             }
@@ -90,5 +91,11 @@ android {
     }
     kotlin {
         jvmToolchain(17)
+    }
+}
+
+sqldelight{
+    database("AppDatabase"){
+        packageName = "com.jetbrains.handson.kmm.shared.cache"
     }
 }
