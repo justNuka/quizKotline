@@ -21,9 +21,7 @@ internal fun rootNavHost() {
             route = "/welcome",
             navTransition = NavTransition(),
         ) {
-            //welcomeScreen(navigator)
-
-            scoreScreen(navigator, "3 sur 3")
+            welcomeScreen(navigator)
         }
         scene(
             route = "/quiz",

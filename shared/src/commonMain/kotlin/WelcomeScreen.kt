@@ -1,3 +1,4 @@
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
@@ -17,7 +18,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import moe.tlaster.precompose.navigation.Navigator
+import org.jetbrains.compose.resources.ExperimentalResourceApi
+import org.jetbrains.compose.resources.painterResource
 
+@OptIn(ExperimentalResourceApi::class)
 @Composable
 internal fun welcomeScreen(navigator: Navigator) {
 
@@ -25,6 +29,12 @@ internal fun welcomeScreen(navigator: Navigator) {
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxWidth().fillMaxHeight().background(Color.LightGray)
     ) {
+        Image(
+            painterResource("Images/question_icon.png"),
+            null, alpha = 0.5f,
+            modifier = Modifier.matchParentSize()
+        )
+
         Card(
             shape = RoundedCornerShape(15.dp),
             modifier = Modifier.padding(10.dp)
@@ -34,7 +44,7 @@ internal fun welcomeScreen(navigator: Navigator) {
                     width = 1.dp
                 ),
 
-        ) {
+            ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
 
 

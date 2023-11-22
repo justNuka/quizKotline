@@ -1,14 +1,12 @@
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.Card
@@ -32,9 +30,15 @@ import org.jetbrains.compose.resources.painterResource
 @Composable
 internal fun scoreScreen(navigator: Navigator, score: String) {
     Box(
-        //contentAlignment = Alignment.Center,
-        modifier = Modifier.fillMaxWidth().fillMaxHeight().background(Color.LightGray)
+        contentAlignment = Alignment.Center,
+        modifier = Modifier.fillMaxWidth().fillMaxHeight()
     ) {
+        Image(
+            painterResource("Images/question_icon.png"),
+            null, alpha = 0.5f,
+            modifier = Modifier.matchParentSize()
+        )
+
         Column(horizontalAlignment = Alignment.CenterHorizontally)
         {
             Text(
@@ -44,7 +48,7 @@ internal fun scoreScreen(navigator: Navigator, score: String) {
 
             Card(
                 shape = RoundedCornerShape(15.dp),
-                modifier = Modifier.padding(start = 30.dp)
+                modifier = Modifier.padding(start = 10.dp)
                     .border(
                         shape = RoundedCornerShape(15.dp),
                         color = Color.Black,
@@ -78,33 +82,23 @@ internal fun scoreScreen(navigator: Navigator, score: String) {
                     }
                 }
             }
+
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Row(modifier = Modifier.padding(vertical= 20.dp)) {
-                    AnimatedVisibility(true) {
+                val photos = listOf(
+                    "Images/Oops Emoji.png",
+                    "Images/Oops Emoji.png",
+                    "Images/Oops Emoji.png"
+                )
+                LazyRow(modifier = Modifier.padding(start = 20.dp, top = 10.dp)) {
+                    items(photos.size) { index ->
                         Image(
-                            painterResource("Images/Oops Emoji.png"),
-                            contentDescription = "photo1",
-                            modifier = Modifier.width(250.dp).padding(horizontal = 8.dp)
-                        )
-                    }
-                    AnimatedVisibility(true) {
-                        Image(
-                            painterResource("Images/Oops Emoji.png"),
-                            contentDescription = "photo2",
-                            modifier = Modifier.width(250.dp).padding(horizontal = 8.dp)
-                        )
-                    }
-                    AnimatedVisibility(true) {
-                        Image(
-                            painterResource("Images/Oops Emoji.png"),
-                            contentDescription = "photo3",
+                            painterResource(photos[index]),
+                            contentDescription = "photo no $index",
                             modifier = Modifier.width(250.dp).padding(horizontal = 8.dp)
                         )
                     }
                 }
             }
-
         }
     }
-
 }
