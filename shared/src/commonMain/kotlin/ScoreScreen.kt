@@ -45,7 +45,7 @@ internal fun scoreScreen(navigator: Navigator, score: String){
                     )
                     Button(
                         modifier = Modifier.padding(all = 20.dp),
-                        onClick = {
+                        onClick = { navigator.navigate(route = "/quiz")
                         }
                     ) {
                         Icon(Icons.Filled.Refresh, contentDescription = "Description")

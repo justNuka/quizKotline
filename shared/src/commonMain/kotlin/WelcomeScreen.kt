@@ -40,7 +40,7 @@ internal fun welcomeScreen(navigator: Navigator){
                     )
                     Button(
                         modifier = Modifier.padding(all = 10.dp),
-                        onClick = {  }
+                        onClick = { navigator.navigate(route = "/quiz") }
 
                     ) {
                         Text("Commencer le quiz")
