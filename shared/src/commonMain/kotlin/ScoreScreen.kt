@@ -18,7 +18,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import moe.tlaster.precompose.navigation.Navigator
 
-@Composable
+
+@Composable()
 internal fun scoreScreen(navigator: Navigator, score: String){
     Box(
         contentAlignment = Alignment.Center,
@@ -37,7 +38,7 @@ internal fun scoreScreen(navigator: Navigator, score: String){
 
                     Text(
                         fontSize = 15.sp,
-                        text = "Score",
+                        text = "score",
                     )
                     Text(
                         fontSize = 30.sp,
@@ -46,10 +47,11 @@ internal fun scoreScreen(navigator: Navigator, score: String){
                     Button(
                         modifier = Modifier.padding(all = 20.dp),
                         onClick = {
+                            navigator.navigate(route = "/quiz")
                         }
                     ) {
-                        Icon(Icons.Filled.Refresh, contentDescription = "Description")
-                        Text(text = "Recommencer le quiz")
+                        Icon(Icons.Filled.Refresh, contentDescription = "Localized description")
+                        Text(text = "Retake the Quiz",)
 
                     }
                 }
