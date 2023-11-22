@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import moe.tlaster.precompose.navigation.Navigator
 
-@Composable()
+@Composable
 internal fun welcomeScreen(navigator: Navigator) {
 
     Box(

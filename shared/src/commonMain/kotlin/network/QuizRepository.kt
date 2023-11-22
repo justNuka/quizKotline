@@ -5,10 +5,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import network.QuizAPI
 import network.data.Question
 
-class QuizRepository()  {
+class QuizRepository  {
 
     private val quizAPI = QuizAPI()
     private val coroutineScope = CoroutineScope(Dispatchers.Default)

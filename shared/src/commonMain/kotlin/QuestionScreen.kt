@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.sp
 import moe.tlaster.precompose.navigation.Navigator
 import network.data.Question
 
-@Composable()
+@Composable
 internal fun questionScreen(navigator: Navigator, questions: List<Question>) {
 
     var questionProgress by remember { mutableStateOf(0) }

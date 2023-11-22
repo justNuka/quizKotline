@@ -19,7 +19,7 @@ import androidx.compose.ui.unit.sp
 import moe.tlaster.precompose.navigation.Navigator
 
 
-@Composable()
+@Composable
 internal fun scoreScreen(navigator: Navigator, score: String){
     Box(
         contentAlignment = Alignment.Center,
@@ -50,7 +50,7 @@ internal fun scoreScreen(navigator: Navigator, score: String){
                         }
                     ) {
                         Icon(Icons.Filled.Refresh, contentDescription = "Localized description")
-                        Text(text = "Retake the Quiz",)
+                        Text(text = "Retake the Quiz")
 
                     }
                 }
