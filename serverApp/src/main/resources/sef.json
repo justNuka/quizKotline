@@ -1,0 +1,1138 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "label": "You can create an emulator to simulate the configuration of a particular type of Android device using a tool like",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Theme Editor"},
+        {"id": 2, "label": "Android SDK Manager"},
+        {"id": 3, "label": "AVD Manager"},
+        {"id": 4, "label": "Virtual Editor"}
+      ]
+    },
+    {
+      "id": 2,
+      "label": "What parameter specifies the Android API level that Gradle should use to compile your app?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "minSdkVersion"},
+        {"id": 2, "label": "compileSdkVersion"},
+        {"id": 3, "label": "targetSdkVersion"},
+        {"id": 4, "label": "testSdkVersion"}
+      ]
+    },
+    {
+      "id": 3,
+      "label": "True or false? Scroll view can contain only one view, or view group, as a child?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "True"},
+        {"id": 2, "label": "False"}
+      ]
+    },
+    {
+      "id": 4,
+      "label": "What phrase means that the compiler validates types while compiling?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "Type safety"},
+        {"id": 2, "label": "Data binding"},
+        {"id": 3, "label": "Type validation"},
+        {"id": 4, "label": "Wrong text"}
+      ]
+    },
+    {
+      "id": 5,
+      "label": "True or false? When your app goes into the background, it's not guaranteed to be destroyed. It may only be stopping and waiting for the user to return to it.",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "True"},
+        {"id": 2, "label": "False"}
+      ]
+    },
+    {
+      "id": 6,
+      "label": "To keep the UI running smoothly, use ___ for long-running tasks, such as all database operations.",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "Coroutines"},
+        {"id": 2, "label": "ViewModels"},
+        {"id": 3, "label": "Returns"},
+        {"id": 4, "label": "Managed threads"}
+      ]
+    },
+    {
+      "id": 7,
+      "label": "What does SDK stand for in the context of Android app development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Software Deployment Kit"},
+        {"id": 2, "label": "Software Development Kit"},
+        {"id": 3, "label": "System Development Kit"},
+        {"id": 4, "label": "System Deployment Kit"}
+      ]
+    },
+    {
+      "id": 8,
+      "label": "In the context of programming, what does API stand for?",
+      "correct_answer_id": 4,
+      "answers": [
+        {"id": 1, "label": "Application Program Interface"},
+        {"id": 2, "label": "Application Programming Interface"},
+        {"id": 3, "label": "Application Process Interface"},
+        {"id": 4, "label": "Application Programming Interface"}
+      ]
+    },
+    {
+      "id": 9,
+      "label": "Which programming language is commonly used for Android app development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Swift"},
+        {"id": 2, "label": "Java"},
+        {"id": 3, "label": "C#"},
+        {"id": 4, "label": "Python"}
+      ]
+    },
+    {
+      "id": 10,
+      "label": "What is the purpose of the 'adb' tool in Android development?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "Android Debug Bridge"},
+        {"id": 2, "label": "Android Database"},
+        {"id": 3, "label": "Android Deployment Bundle"},
+        {"id": 4, "label": "Android Development Bridge"}
+      ]
+    },
+    {
+      "id": 11,
+      "label": "What is the purpose of the 'Manifest' file in an Android app?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Contains app resources"},
+        {"id": 2, "label": "Declares the app's components and their properties"},
+        {"id": 3, "label": "Manages app dependencies"},
+        {"id": 4, "label": "Controls the app's layout"}
+      ]
+    },
+    {
+      "id": 12,
+      "label": "Which of the following is not a layout manager in Android?",
+      "correct_answer_id": 4,
+      "answers": [
+        {"id": 1, "label": "LinearLayout"},
+        {"id": 2, "label": "RelativeLayout"},
+        {"id": 3, "label": "GridLayout"},
+        {"id": 4, "label": "DataLayout"}
+      ]
+    },
+    {
+      "id": 13,
+      "label": "What is the purpose of the 'View' class in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Serves as the base class for UI components"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 14,
+      "label": "What does the term 'Activity' refer to in Android development?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "A single, focused thing that the user can do"},
+        {"id": 2, "label": "A background process that runs independently of the main app"},
+        {"id": 3, "label": "A fragment of the user interface"},
+        {"id": 4, "label": "A data storage component"}
+      ]
+    },
+    {
+      "id": 15,
+      "label": "Which file extension is used for Android layout files?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"
+        {"id": 1, "label": "xml"},
+        {"id": 2, "label": "json"},
+        {"id": 3, "label": "xml"},
+        {"id": 4, "label": "layout"}
+      ]
+    },
+    {
+      "id": 16,
+      "label": "What is the purpose of the 'Intent' class in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Facilitates communication between components"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 17,
+      "label": "Which of the following is not a valid Android data storage option?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Shared Preferences"},
+        {"id": 2, "label": "SQLite Database"},
+        {"id": 3, "label": "MongoDB"},
+        {"id": 4, "label": "Internal Storage"}
+      ]
+    },
+    {
+      "id": 18,
+      "label": "What is the role of the 'AsyncTask' class in Android?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "Performs background operations and publishes results on the UI thread"},
+        {"id": 2, "label": "Manages app resources"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 19,
+      "label": "What does the term 'Fragment' refer to in Android development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "A single, focused thing that the user can do"},
+        {"id": 2, "label": "A modular section of an activity, with its own lifecycle"},
+        {"id": 3, "label": "A background process that runs independently of the main app"},
+        {"id": 4, "label": "A data storage component"}
+      ]
+    },
+    {
+      "id": 20,
+      "label": "What is the purpose of the 'RecyclerView' in Android?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "Displays a scrolling list of elements based on large data sets"},
+        {"id": 2, "label": "Manages app resources"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 21,
+      "label": "What is the purpose of the 'Gradle' build system in Android development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Automates the build process and manages project dependencies"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 22,
+      "label": "Which design pattern is commonly used in Android development for separating concerns and promoting modularization?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Singleton"},
+        {"id": 2, "label": "Observer"},
+        {"id": 3, "label": "MVC (Model-View-Controller)"},
+        {"id": 4, "label": "Decorator"}
+      ]
+    },
+    {
+      "id": 23,
+      "label": "What is the purpose of the 'ViewModel' class in Android architecture components?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Stores and manages UI-related data in a lifecycle-conscious way"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 24,
+      "label": "In Android development, what is the purpose of the 'LiveData' class?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Stores and manages UI-related data in a lifecycle-conscious way"},
+        {"id": 3, "label": "Observable data holder class that is lifecycle-aware"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 25,
+      "label": "What is the purpose of the 'Retrofit' library in Android development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "A type-safe HTTP client for Android and Java"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 26,
+      "label": "What does the acronym 'REST' stand for in the context of web services?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "Representational State Transfer"},
+        {"id": 2, "label": "Remote Execution and Service Transmission"},
+        {"id": 3, "label": "Resource Encoding and Secure Transmission"},
+        {"id": 4, "label": "Responsive and Efficient Service Technology"}
+      ]
+    },
+    {
+      "id": 27,
+      "label": "What is the purpose of the 'SharedPreferences' in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Stores key-value pairs persistently"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 28,
+      "label": "In Android development, what does the term 'Serializable' mean?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Refers to a high-performance graphics rendering library"},
+        {"id": 2, "label": "A layout manager for complex UI structures"},
+        {"id": 3, "label": "An interface used to mark
+        {"id": 1, "label": "Refers to a high-performance graphics rendering library"},
+        {"id": 2, "label": "A layout manager for complex UI structures"},
+        {"id": 3, "label": "An interface used to mark objects as serializable"},
+        {"id": 4, "label": "A method for defining custom view animations"}
+      ]
+    },
+    {
+      "id": 29,
+      "label": "What is the purpose of the 'ProGuard' tool in Android development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Code shrinking and obfuscation to optimize and secure the code"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 30,
+      "label": "What is the Android Architecture Components library used for?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Optimizes code execution"},
+        {"id": 3, "label": "Provides guidance on app architecture best practices"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 31,
+      "label": "What is the 'singleton pattern' in programming?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "A design pattern used for creating multiple instances of a class"},
+        {"id": 2, "label": "A design pattern ensuring a class has only one instance and provides a global point of access to it"},
+        {"id": 3, "label": "A pattern for organizing code in multiple modules"},
+        {"id": 4, "label": "A pattern for handling user input in Android apps"}
+      ]
+    },
+    {
+      "id": 32,
+      "label": "What is the purpose of the 'Handler' class in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Optimizes code execution"},
+        {"id": 3, "label": "Allows communication between background threads and the main thread"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 33,
+      "label": "What is the role of the 'HandlerThread' class in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "A thread running with a looper that allows it to handle messages"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 34,
+      "label": "What is the purpose of the 'ContentProvider' in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Optimizes code execution"},
+        {"id": 3, "label": "Manages access to a structured set of data"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 35,
+      "label": "What is the purpose of the 'Loader' framework in Android?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "Facilitates loading data asynchronously in the background"},
+        {"id": 2, "label": "Optimizes code execution"},
+        {"id": 3, "label": "Manages app resources"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 36,
+      "label": "What does 'MVVM' stand for in the context of software architecture?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Model View Controller"},
+        {"id": 2, "label": "Model-View-Presenter"},
+        {"id": 3, "label": "Model-View-ViewModel"},
+        {"id": 4, "label": "Model-View-Adapter"}
+      ]
+    },
+    {
+      "id": 37,
+      "label": "What is the purpose of the 'CoordinatorLayout' in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a top-level container for coordinating child views"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 38,
+      "label": "What is the 'Observer pattern' in programming?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "A pattern for creating multiple instances of a class"},
+        {"id": 2, "label": "A pattern for organizing code in multiple modules"},
+        {"id": 3, "label": "A behavioral design pattern where an object, known as the subject, maintains a list of its dependents, called observers, that are notified of any state changes"},
+        {"id": 4, "label": "A pattern for handling user input in Android apps"}
+      ]
+    },
+    {
+      "id": 39,
+      "label": "What is the purpose of the 'ConstraintLayout' in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "A flexible layout manager for designing complex UIs with a flat view hierarchy"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 40,
+      "label": "What is the purpose of the 'LiveData' class in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Stores and manages UI-related data in a lifecycle-conscious way"},
+        {"id": 3, "label": "Observable data holder class that is lifecycle-aware"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 41,
+      "label": "What is the purpose of the 'ViewModel' class in Android architecture components?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Stores and manages UI-related data in a lifecycle-conscious way"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 42,
+      "label": "What is the purpose of the 'Dagger' library in Android development?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "Dependency injection framework"},
+        {"id": 2, "label": "Manages app resources"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 43,
+      "label": "In Android development, what does the term 'Serializable' mean?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Refers to a high-performance graphics rendering library"},
+        {"id": 2, "label": "A layout manager for complex UI structures"},
+        {"id": 3, "label": "An interface used to mark objects as serializable"},
+        {"id": 4, "label": "A method for defining custom view animations"}
+      ]
+    },
+    {
+      "id": 44,
+      "label": "What is the purpose of the 'Butter Knife' library in Android development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Dependency injection framework"},
+        {"id": 2, "label": "View binding library for Android"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 45,
+      "label": "What is the purpose of the 'Espresso' framework in Android testing?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Dependency injection framework"},
+        {"id": 2, "label": "View binding library for Android"},
+        {"id": 3, "label": "UI testing framework for writing concise and reliable Android UI tests"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 46,
+      "label": "What is the purpose of the 'Glide' library in Android development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Dependency injection framework"},
+        {"id": 2, "label": "Image loading and caching library"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 47,
+      "label": "What is the purpose of the 'Firebase' platform in Android development?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Dependency injection framework"},
+        {"id": 2, "label": "View binding library for Android"},
+        {"id": 3, "label": "A comprehensive mobile and web application development platform"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 48,
+      "label": "What is the purpose of the 'RxJava' library in Android development?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "A reactive programming library for composing asynchronous and event-based programs"},
+        {"id": 2, "label": "Dependency injection framework"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 49,
+      "label": "What is the purpose of the 'OkHttp' library in Android development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "A reactive programming library for composing asynchronous and event-based programs"},
+        {"id": 2, "label": "An HTTP client for making network requests"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 50,
+      "label": "What is the purpose of the 'LeakCanary' library in Android development?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "A reactive programming library for composing asynchronous and event-based programs"},
+        {"id": 2, "label": "View binding library for Android"},
+        {"id": 3, "label": "A memory leak detection library"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 51,
+      "label": "What is the purpose of the 'MVP' architecture in Android development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Model View Controller"},
+        {"id": 2, "label": "Model-View-Presenter"},
+        {"id": 3, "label": "Model-View-ViewModel"},
+        {"id": 4, "label": "Model-View-Adapter"}
+      ]
+    },
+    {
+      "id": 52,
+      "label": "What is the purpose of the 'AAC' in Android development?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Optimizes code execution"},
+        {"id": 3, "label": "Android Architecture Components"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 53,
+      "label": "What is the purpose of the 'JNI' in Android development?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "Java Native Interface"},
+        {"id": 2, "label": "Java Networking Interface"},
+        {"id": 3, "label": "Java Notification Interface"},
+        {"id": 4, "label": "Java Navigation Interface"}
+      ]
+    },
+    {
+      "id": 54,
+      "label": "What is the purpose of the 'AAC' in Android development?",
+      "correct_answer_id": 4,
+      "answers": [
+        {"id": 1, "label": "Android Architecture Components"},
+        {"id": 2, "label": "Optimizes code execution"},
+        {"id": 3, "label": "Manages app resources"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 55,
+      "label": "What is the purpose of the 'NFC' in Android devices?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Near Field Connection"},
+        {"id": 2, "label": "Near Field Communication"},
+        {"id": 3, "label": "Network File Cache"},
+        {"id": 4, "label": "Next-Generation File Compression"}
+      ]
+    },
+    {
+      "id": 56,
+      "label": "What is the purpose of the 'AIDL' in Android development?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "Android Interface Definition Language"},
+        {"id": 2, "label": "Android Intent Data Library"},
+        {"id": 3, "label": "Android In-App Download Library"},
+        {"id": 4, "label": "Android Interface Design Language"}
+      ]
+    },
+    {
+      "id": 57,
+      "label": "What is the purpose of the 'RenderScript' in Android development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Android Interface Definition Language"},
+        {"id": 2, "label": "High-performance computation API"},
+        {"id": 3, "label": "Android In-App Download Library"},
+        {"id": 4, "label": "Android Interface Design Language"}
+      ]
+    },
+    {
+      "id": 58,
+      "label": "What is the purpose of the 'AAR' in Android development?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Android Application Resource"},
+        {"id": 2, "label": "Android Archive Resource"},
+        {"id": 3, "label": "Android Archive"},
+        {"id": 4, "label": "Android Application Repository"}
+      ]
+    },
+    {
+      "id": 59,
+      "label": "What is the purpose of the 'Looper' class in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a message loop for threads to handle messages"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 60,
+      "label": "What is the purpose of the 'JNI' in Android development?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "Java Native Interface"},
+        {"id": 2, "label": "Java Networking Interface"},
+        {"id": 3, "label": "Java Notification Interface"},
+        {"id": 4, "label": "Java Navigation Interface"}
+      ]
+    },
+    {
+      "id": 61,
+      "label": "What is the purpose of the 'Handler' class in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Optimizes code execution"},
+        {"id": 3, "label": "Allows communication between background threads and the main thread"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 62,
+      "label": "What is the purpose of the 'VectorDrawable' in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "A data structure for storing graphics"},
+        {"id": 2, "label": "A drawable resource for vector graphics"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 63,
+      "label": "What is the purpose of the 'AndroidManifest.xml' file?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Optimizes code execution"},
+        {"id": 3, "label": "Declares the fundamental characteristics of the app"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 64,
+      "label": "What is the purpose of the 'Canvas' class in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a drawing surface for custom views"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 65,
+      "label": "What is the purpose of the 'SQLite' database in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Optimizes code execution"},
+        {"id": 3, "label": "Provides a lightweight relational database for local storage"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 66,
+      "label": "What is the purpose of the 'Parcelable' interface in Android?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "A special Android implementation of the Java Serializable interface for efficient object serialization"},
+        {"id": 2, "label": "A layout manager for complex UI structures"},
+        {"id": 3, "label": "An interface used to mark objects as serializable"},
+        {"id": 4, "label": "A method for defining custom view animations"}
+      ]
+    },
+    {
+      "id": 67,
+      "label": "What is the purpose of the 'JobIntentService' in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "An improvement over IntentService for background processing"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 68,
+      "label": "What is the purpose of the 'Vibrator' class in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a drawing surface for custom views"},
+        {"id": 3, "label": "Controls the vibration function of the device"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 69,
+      "label": "What is the purpose of the 'AdMob' platform in Android development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a platform for monetizing mobile apps through in-app advertisements"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 70,
+      "label": "What is the purpose of the 'Looper' class in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a message loop for threads to handle messages"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 71,
+      "label": "What is the purpose of the 'Thread' class in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a drawing surface for custom views"},
+        {"id": 3, "label": "Enables concurrent execution of tasks"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 72,
+      "label": "What is the purpose of the 'Palette' class in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Extracts prominent colors from images"},
+        {"id": 3, "label": "Controls the vibration function of the device"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 73,
+      "label": "What is the purpose of the 'WebView' component in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a drawing surface for custom views"},
+        {"id": 3, "label": "Displays web content within an app"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 74,
+      "label": "What is the purpose of the 'MediaPlayer' class in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Plays audio and video files"},
+        {"id": 3, "label": "Controls the vibration function of the device"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 75,
+      "label": "What is the purpose of the 'FragmentTransaction' in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Optimizes code execution"},
+        {"id": 3, "label": "Performs operations on fragments, such as add, remove, or replace"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 76,
+      "label": "What is the purpose of the 'PackageManager' in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Manages the installation and updating of applications on the device"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 77,
+      "label": "What is the purpose of the 'SensorManager' in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a drawing surface for custom views"},
+        {"id": 3, "label": "Manages various device sensors, such as accelerometer and gyroscope"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 78,
+      "label": "What is the purpose of the 'HandlerThread' class in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "A thread running with a looper that allows
+        {"id": 3, "label": "Manages various device sensors, such as accelerometer and gyroscope"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 79,
+      "label": "What is the purpose of the 'AlarmManager' in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a drawing surface for custom views"},
+        {"id": 3, "label": "Schedules tasks or notifications to be delivered at a specified time"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 80,
+      "label": "What is the purpose of the 'Parcelable' interface in Android?",
+      "correct_answer_id": 1,
+      "answers": [
+        {"id": 1, "label": "A special Android implementation of the Java Serializable interface for efficient object serialization"},
+        {"id": 2, "label": "A layout manager for complex UI structures"},
+        {"id": 3, "label": "An interface used to mark objects as serializable"},
+        {"id": 4, "label": "A method for defining custom view animations"}
+      ]
+    },
+    {
+      "id": 81,
+      "label": "What is the purpose of the 'VectorDrawable' in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "A data structure for storing graphics"},
+        {"id": 2, "label": "A drawable resource for vector graphics"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 82,
+      "label": "What is the purpose of the 'ViewStub' in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a drawing surface for custom views"},
+        {"id": 3, "label": "A lightweight view that acts as a placeholder for other views and defers loading their layout until they are needed"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 83,
+      "label": "What is the purpose of the 'ViewGroup' class in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Defines the layout structure and holds views and other view groups"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 84,
+      "label": "What is the purpose of the 'RecyclerView' in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a drawing surface for custom views"},
+        {"id": 3, "label": "A flexible view for providing a limited window into a large dataset"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 85,
+      "label": "What is the purpose of the 'ContentResolver' in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a unified interface for retrieving and updating data in the app's content providers"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 86,
+      "label": "What is the purpose of the 'AsyncTask' class in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a drawing surface for custom views"},
+        {"id": 3, "label": "Performs background operations and publishes results on the UI thread"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 87,
+      "label": "What is the purpose of the 'ViewBinding' feature in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Generates a binding class for each XML layout file present in the module"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 88,
+      "label": "What is the purpose of the 'Context' class in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Defines the layout structure and holds views and other view groups"},
+        {"id": 3, "label": "Provides information about the application environment and allows access to application-specific resources"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 89,
+      "label": "What is the purpose of the 'Snackbar' class in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Displays lightweight transient notifications"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 90,
+      "label": "What is the purpose of the 'VectorDrawable' in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "A data structure for storing graphics"},
+        {"id": 2, "label": "A drawable resource for vector graphics"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 91,
+      "label": "What is the purpose of the 'Canvas' class in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a drawing surface for custom views"},
+        {"id": 3, "label": "Used for drawing on the screen and custom view rendering"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 92,
+      "label": "What is the purpose of the 'Intent' class in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Facilitates communication between components such as activities, services, and broadcast receivers"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 93,
+      "label": "What is the purpose of the 'ConstraintLayout' in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Defines the layout structure and holds views and other view groups"},
+        {"id": 3, "label": "A flexible layout manager for designing complex UIs with a flat view hierarchy"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 94,
+      "label": "What is the purpose of the 'ViewModel' class in Android architecture components?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Stores and manages UI-related data in a lifecycle-conscious way"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 95,
+      "label": "What is the purpose of the 'ViewStub' in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a drawing surface for custom views"},
+        {"id": 3, "label": "A lightweight view that acts as a placeholder for other views and defers loading their layout until they are needed"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 96,
+      "label": "What is the purpose of the 'SQLite' database in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a lightweight relational database for local storage"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 97,
+      "label": "What is the purpose of the 'ContentProvider' in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Defines the layout structure and holds views and other view groups"},
+        {"id": 3, "label": "Manages access to a structured set of data and provides a standard interface to it"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 98,
+      "label": "What is the purpose of the 'ExoPlayer' library in Android development?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "A reactive programming library for composing asynchronous and event-based programs"},
+        {"id": 2, "label": "An open-source media player library for playing audio and video in Android apps"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 99,
+      "label": "What is the purpose of the 'ConstraintSet' in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "A layout manager for complex UI structures"},
+        {"id": 3, "label": "Defines constraints for views within a ConstraintLayout"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 100,
+      "label": "What is the purpose of the 'JobScheduler' in Android?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "An API for scheduling various types of jobs, including background tasks"},
+        {"id": 3, "label": "Optimizes code execution"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 101,
+      "label": "What is the purpose of the 'ViewModel' class in Android architecture components?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Stores and manages UI-related data in a lifecycle-conscious way"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+    },
+    {
+      "id": 102,
+      "label": "What is the purpose of the 'RecyclerView' in Android?",
+      "correct_answer_id": 3,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "Provides a drawing surface for custom views"},
+        {"id": 3, "label": "A flexible view for providing a limited window into a large dataset"},
+        {"id": 4, "label": "Optimizes code execution"}
+      ]
+    },
+    {
+      "id": 103,
+      "label": "What is the purpose of the 'LiveData' class in Android architecture components?",
+      "correct_answer_id": 2,
+      "answers": [
+        {"id": 1, "label": "Manages app resources"},
+        {"id": 2, "label": "An observable data holder class that is lifecycle-aware"},
+        {"id": 3, "label": "Handles database operations"},
+        {"id": 4, "label": "Controls app navigation"}
+      ]
+	}
+  ]
+   
+
