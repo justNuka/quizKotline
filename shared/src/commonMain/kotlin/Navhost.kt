@@ -6,7 +6,7 @@ import moe.tlaster.precompose.navigation.rememberNavigator
 import moe.tlaster.precompose.navigation.transition.NavTransition
 import network.QuizRepository
 
-private val quizRepository = QuizRepository()
+private var quizRepository = QuizRepository()
 
 @Composable
 internal fun rootNavHost() {
@@ -21,18 +21,25 @@ internal fun rootNavHost() {
             route = "/welcome",
             navTransition = NavTransition(),
         ) {
-            welcomeScreen(navigator)
+            quizRepository.getMaxSize()
+             welcomeScreen(navigator,quizRepository)
         }
         scene(
-            route = "/quiz",
+            route = "/quiz/{nbQuestion}",
             navTransition = NavTransition(),
-        ) {
+        ) { backStackEntry ->
+            backStackEntry.path<Int>("nbQuestion")?.let { nbQuestion ->
+                println("nav host: $nbQuestion")
 
-            val questions = quizRepository.questionState.collectAsState()
+                val questions = quizRepository.questionState.collectAsState()
 
-            if (questions.value.isNotEmpty()) {
-                questionScreen(navigator, questions.value)
+                if (questions.value.isNotEmpty()) {
+                    questionScreen(navigator, questions.value)
+                } else
+                    quizRepository.updateQuiz(nbQuestion)
+
             }
+
         }
         scene(
             route = "/score/{score}",
