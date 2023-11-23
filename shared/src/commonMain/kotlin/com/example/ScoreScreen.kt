@@ -73,7 +73,7 @@ internal fun scoreScreen(navigator: Navigator, score: String) {
                         modifier = Modifier.padding(all = 20.dp),
                         shape = RoundedCornerShape(15.dp),
                         onClick = {
-                            navigator.navigate(route = "/quiz")
+                            navigator.navigate(route = "/welcome")
                         }
                     ) {
                         Icon(Icons.Filled.Refresh, contentDescription = "Localized description")

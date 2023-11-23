@@ -7,6 +7,9 @@ import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.rememberNavigator
 import moe.tlaster.precompose.navigation.transition.NavTransition
 import com.example.network.QuizRepository
+import questionScreen
+import scoreScreen
+import welcomeScreen
 
 private var quizRepository = QuizRepository()
 
