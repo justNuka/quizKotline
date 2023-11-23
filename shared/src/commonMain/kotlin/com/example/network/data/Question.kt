@@ -1,4 +1,4 @@
-package network.data
+package com.example.network.data
 
 import kotlinx.serialization.SerialName
 

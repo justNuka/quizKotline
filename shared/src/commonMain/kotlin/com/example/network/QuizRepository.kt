@@ -1,12 +1,11 @@
-package network
+package com.example.network
 
+import com.example.network.data.Question
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import network.QuizAPI
-import network.data.Question
 
 class QuizRepository()  {
 

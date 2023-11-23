@@ -1,10 +1,12 @@
+package com.example
+
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.rememberNavigator
 import moe.tlaster.precompose.navigation.transition.NavTransition
-import network.QuizRepository
+import com.example.network.QuizRepository
 
 private val quizRepository = QuizRepository()
 

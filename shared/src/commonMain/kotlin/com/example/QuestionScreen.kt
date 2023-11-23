@@ -1,3 +1,5 @@
+package com.example
+
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -28,7 +30,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import moe.tlaster.precompose.navigation.Navigator
-import network.data.Question
+import com.example.network.data.Question
 
 @Composable()
 internal fun questionScreen(navigator: Navigator, questions: List<Question>) {
