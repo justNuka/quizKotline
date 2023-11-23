@@ -22,12 +22,14 @@ class QuizAPI {
                 })
         }
     }
+
     suspend fun getQuestions(number: Int): Quiz{
         println("quiz Api: Ask for $number questions")
         try {
             return httpClient.get("https://quiz.leod1.fr/quizz/$number").body()
         }
         catch (e: Exception) {
+            println("quiz Api error: connexion à l'api impossible")
             return Quiz(
                 questions = listOf(
                     Question(
@@ -80,17 +82,128 @@ class QuizAPI {
                             Answer(4, "Virtual Editor")
                         )
                     ),
+                    Question(
+                        6,
+                        "What is the name of the Gradle plugin that enables you to write Kotlin code for your Gradle build files?",
+                        3,
+                        listOf(
+                            Answer(1, "Kotlin Gradle plugin"),
+                            Answer(2, "Kotlin DSL plugin"),
+                            Answer(3, "Kotlin build plugin"),
+                            Answer(4, "Kotlin build tools plugin")
+                        )
+                    ),
+                    Question(
+                        7,
+                        "You can create an emulator to simulate the configuration of a particular type of Android device using a tool like",
+                        3,
+                        listOf(
+                            Answer(1, "Theme Editor"),
+                            Answer(2, "Android SDK Manager"),
+                            Answer(3, "AVD Manager"),
+                            Answer(4, "Virtual Editor")
+                        )
+                    ),
+                    Question(
+                        8,
+                        "What parameter specifies the Android API level that Gradle should use to compile your app?",
+                        2,
+                        listOf(
+                            Answer(1, "minSdkVersion"),
+                            Answer(2, "Android SDK Manager"),
+                            Answer(3, "AVD Manager"),
+                            Answer(4, "Virtual Editor")
+                        )
+                    ),
+                    Question(
+                        9,
+                        "What is the name of the Gradle plugin that enables you to write Kotlin code for your Gradle build files?",
+                        3,
+                        listOf(
+                            Answer(1, "Kotlin Gradle plugin"),
+                            Answer(2, "Kotlin DSL plugin"),
+                            Answer(3, "Kotlin build plugin"),
+                            Answer(4, "Kotlin build tools plugin")
+                        )
+                    ),
+                    Question(
+                        10,
+                        "You can create an emulator to simulate the configuration of a particular type of Android device using a tool like",
+                        3,
+                        listOf(
+                            Answer(1, "Theme Editor"),
+                            Answer(2, "Android SDK Manager"),
+                            Answer(3, "AVD Manager"),
+                            Answer(4, "Virtual Editor")
+                        )
+                    ),
+                    Question(
+                        11,
+                        "What parameter specifies the Android API level that Gradle should use to compile your app?",
+                        2,
+                        listOf(
+                            Answer(1, "minSdkVersion"),
+                            Answer(2, "Android SDK Manager"),
+                            Answer(3, "AVD Manager"),
+                            Answer(4, "Virtual Editor")
+                        )
+                    ),
+                    Question(
+                        12,
+                        "What is the name of the Gradle plugin that enables you to write Kotlin code for your Gradle build files?",
+                        3,
+                        listOf(
+                            Answer(1, "Kotlin Gradle plugin"),
+                            Answer(2, "Kotlin DSL plugin"),
+                            Answer(3, "Kotlin build plugin"),
+                            Answer(4, "Kotlin build tools plugin")
+                        )
+                    ),
+                    Question(
+                        13,
+                        "You can create an emulator to simulate the configuration of a particular type of Android device using a tool like",
+                        3,
+                        listOf(
+                            Answer(1, "Theme Editor"),
+                            Answer(2, "Android SDK Manager"),
+                            Answer(3, "AVD Manager"),
+                            Answer(4, "Virtual Editor")
+                        )
+                    ),
+                    Question(
+                        14,
+                        "What parameter specifies the Android API level that Gradle should use to compile your app?",
+                        2,
+                        listOf(
+                            Answer(1, "minSdkVersion"),
+                            Answer(2, "Android SDK Manager"),
+                            Answer(3, "AVD Manager"),
+                            Answer(4, "Virtual Editor")
+                        )
+                    ),
+                    Question(
+                        15,
+                        "What is the name of the Gradle plugin that enables you to write Kotlin code for your Gradle build files?",
+                        3,
+                        listOf(
+                            Answer(1, "Kotlin Gradle plugin"),
+                            Answer(2, "Kotlin DSL plugin"),
+                            Answer(3, "Kotlin build plugin"),
+                            Answer(4, "Kotlin build tools plugin")
+                        )
+                    ),
                 )
             )
         }
     }
     suspend fun getMaxQuestions(): Int{
-        println("max: ${httpClient.get("https://quiz.leod1.fr/size").body<String>()}")
         try {
+            println("max: ${httpClient.get("https://quiz.leod1.fr/size").body<String>()}")
             return httpClient.get("https://quiz.leod1.fr/size").body()
-        }catch (e: Exception){
-            return 5
         }
-
+        catch (e: Exception) {
+            println("quiz Api error: connexion à l'api impossible")
+            return 15
+        }
     }
 }
