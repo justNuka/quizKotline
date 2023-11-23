@@ -130,13 +130,7 @@ internal fun questionScreen(navigator: Navigator, questions: List<Question>) {
                             "success"
                         } else "invalid"
 
-                        if (questionProgress < questions.size - 1) {
-                            questionProgress++
-                            selectedAnswer = 1
-                        } else {
-                            // Go to the score section
-                            navigator.navigate("/score/$score out of ${questions.size}")
-                        }
+
                     }
                 ) {
                     if (questionProgress < questions.size - 1) nextOrDoneButton(
@@ -152,6 +146,13 @@ internal fun questionScreen(navigator: Navigator, questions: List<Question>) {
                 )
                 if (valid != "question") LaunchedEffect(valid) {
                     delay(500)
+                    if (questionProgress < questions.size - 1) {
+                        questionProgress++
+                        selectedAnswer = 1
+                    } else {
+                        // Go to the score section
+                        navigator.navigate("/score/$score out of ${questions.size}")
+                    }
                     valid = "question"
                 }
             }

@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import network.data.Question
 
-class QuizRepository  {
+class QuizRepository()  {
 
     private val quizAPI = QuizAPI()
     private val coroutineScope = CoroutineScope(Dispatchers.Default)
@@ -15,16 +15,24 @@ class QuizRepository  {
     private var _questionState=  MutableStateFlow(listOf<Question>())
     var questionState = _questionState
 
+    private var _maxQuestionSize = MutableStateFlow(20)
+    var maxQuestionSize = _maxQuestionSize
     init {
-        updateQuiz()
+        //updateQuiz(number)
     }
 
-    private suspend fun fetchQuiz(): List<Question> = quizAPI.getAllQuestions().questions
+    private suspend fun fetchQuiz(number : Int): List<Question> = quizAPI.getQuestions(number).questions
 
-    private fun updateQuiz(){
+    private suspend fun fetchMaxQuestion(): Int = quizAPI.getMaxQuestions()
+    fun updateQuiz(number: Int){
 
         coroutineScope.launch {
-            _questionState.update { fetchQuiz() }
+            _questionState.update { fetchQuiz(number) }
+        }
+    }
+    fun getMaxSize(){
+        coroutineScope.launch {
+            _maxQuestionSize.update { fetchMaxQuestion() }
         }
     }
 }

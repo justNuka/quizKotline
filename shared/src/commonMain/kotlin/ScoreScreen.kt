@@ -85,9 +85,9 @@ internal fun scoreScreen(navigator: Navigator, score: String) {
 
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 val photos = listOf(
-                    "Images/Oops Emoji.png",
-                    "Images/Oops Emoji.png",
-                    "Images/Oops Emoji.png"
+                    "Images/photoElias.png",
+                    "Images/photoFlo.jpg",
+                    "Images/photoLeo.jpg"
                 )
                 LazyRow(modifier = Modifier.padding(start = 20.dp, top = 10.dp)) {
                     items(photos.size) { index ->

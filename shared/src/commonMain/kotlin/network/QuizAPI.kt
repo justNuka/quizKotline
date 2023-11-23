@@ -20,7 +20,13 @@ class QuizAPI {
                 })
         }
     }
-    suspend fun getAllQuestions(): Quiz {
-        return httpClient.get("https://awl.li/devoxxkmm2023").body()
+
+    suspend fun getQuestions(number: Int): Quiz{
+        println("quiz Api: Ask for $number questions")
+        return httpClient.get("https://quiz.leod1.fr/quizz/$number").body()
+    }
+    suspend fun getMaxQuestions(): Int{
+        println("max: ${httpClient.get("https://quiz.leod1.fr/size").body<String>()}")
+        return httpClient.get("https://quiz.leod1.fr/size").body()
     }
 }
