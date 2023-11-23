@@ -155,7 +155,6 @@
       "label": "Which file extension is used for Android layout files?",
       "correct_answer_id": 3,
       "answers": [
-        {"
         {"id": 1, "label": "xml"},
         {"id": 2, "label": "json"},
         {"id": 3, "label": "xml"},
@@ -301,7 +300,7 @@
       "answers": [
         {"id": 1, "label": "Refers to a high-performance graphics rendering library"},
         {"id": 2, "label": "A layout manager for complex UI structures"},
-        {"id": 3, "label": "An interface used to mark
+        {"id": 3, "label": "An interface used to mark"},
         {"id": 1, "label": "Refers to a high-performance graphics rendering library"},
         {"id": 2, "label": "A layout manager for complex UI structures"},
         {"id": 3, "label": "An interface used to mark objects as serializable"},
@@ -853,7 +852,7 @@
       "correct_answer_id": 2,
       "answers": [
         {"id": 1, "label": "Manages app resources"},
-        {"id": 2, "label": "A thread running with a looper that allows
+        {"id": 2, "label": "A thread running with a looper that allows"},
         {"id": 3, "label": "Manages various device sensors, such as accelerometer and gyroscope"},
         {"id": 4, "label": "Optimizes code execution"}
       ]
@@ -1134,5 +1133,6 @@
       ]
 	}
   ]
+}
    
 
