@@ -1,17 +1,18 @@
 package com.example
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.rememberNavigator
 import moe.tlaster.precompose.navigation.transition.NavTransition
 import com.example.network.QuizRepository
+import com.example.network.data.Question
 import questionScreen
 import scoreScreen
 import welcomeScreen
 
 private var quizRepository = QuizRepository()
+private var questions = listOf<Question>()
 
 @Composable
 internal fun rootNavHost() {
@@ -36,12 +37,8 @@ internal fun rootNavHost() {
             backStackEntry.path<Int>("nbQuestion")?.let { nbQuestion ->
                 println("nav host: $nbQuestion")
 
-                val questions = quizRepository.questionState.collectAsState()
+                questionScreen(navigator, quizRepository,nbQuestion)
 
-                if (questions.value.isNotEmpty()) {
-                    questionScreen(navigator, questions.value)
-                } else
-                    quizRepository.updateQuiz(nbQuestion)
 
             }
 
@@ -51,6 +48,7 @@ internal fun rootNavHost() {
             navTransition = NavTransition(),
         ) { backStackEntry ->
             backStackEntry.path<String>("score")?.let { score ->
+                questions= listOf()
                 scoreScreen(navigator, score)
             }
         }

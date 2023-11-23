@@ -24,6 +24,7 @@ import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Done
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -35,20 +36,21 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.network.QuizRepository
 import kotlinx.coroutines.delay
 import moe.tlaster.precompose.navigation.Navigator
-import com.example.network.data.Question
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-internal fun questionScreen(navigator: Navigator, questions: List<Question>) {
+internal fun questionScreen(navigator: Navigator, pQuizRepository: QuizRepository, nbQuestion: Int) {
 
     var questionProgress by remember { mutableStateOf(0) }
     var selectedAnswer by remember { mutableStateOf(1) }
     var score by remember { mutableStateOf(0) }
     var valid by remember { mutableStateOf("question") }
+    val questions = pQuizRepository.questionState.collectAsState().value
 
 
     Box {
@@ -57,103 +59,114 @@ internal fun questionScreen(navigator: Navigator, questions: List<Question>) {
             null, alpha = 0.5f,
             modifier = Modifier.matchParentSize()
         )
-
-        Column(
-            modifier = Modifier.fillMaxWidth().fillMaxHeight(),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Card(
-                shape = RoundedCornerShape(15.dp),
-                modifier = Modifier.padding(60.dp)
-                    .border(shape = RoundedCornerShape(15.dp), color = Color.Black, width = 1.dp)
-            ) {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = Modifier.padding(horizontal = 10.dp)
-                ) {
-                    Text(
-                        modifier = Modifier.padding(all = 10.dp),
-                        text = questions[questionProgress].label,
-                        fontSize = 25.sp,
-                        textAlign = TextAlign.Center
-                    )
-                }
-            }
-
-            //List of answer
-            Column(modifier = Modifier.selectableGroup()) {
-                questions[questionProgress].answers.forEach { answer ->
-                    Card(
-                        shape = RoundedCornerShape(15.dp),
-                        modifier = Modifier
-                            .padding(horizontal = 16.dp, vertical = 5.dp)
-                            .border(
-                                shape = RoundedCornerShape(15.dp),
-                                color = Color.Black,
-                                width = 1.dp
-                            )
-                            .background(Color.Transparent)
-                            .width(400.dp)
-                    ) {
-                        Row(
-                            modifier = Modifier.padding(horizontal = 16.dp)
-                                .clickable { selectedAnswer = answer.id }
-                                .width(400.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-
-                            ) {
-
-                            RadioButton(
-                                modifier = Modifier.padding(end = 16.dp),
-                                selected = (selectedAnswer == answer.id),
-                                onClick = { selectedAnswer = answer.id }
-                            )
-                            Text(text = answer.label)
-                        }
-
-                    }
-                }
-            }
+        if(questions.isEmpty() || questions.size != nbQuestion){
+            pQuizRepository.updateQuiz(nbQuestion)
+        }
+        else
+        {
             Column(
-                modifier = Modifier.fillMaxHeight(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Bottom
+                modifier = Modifier.fillMaxWidth().fillMaxHeight(),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                //valid button
-                Button(
-                    modifier = Modifier.padding(bottom = 20.dp),
+                Card(
                     shape = RoundedCornerShape(15.dp),
-                    onClick = {
-                        valid = if (selectedAnswer == questions[questionProgress].correctAnswerId) {
-                            score++
-                            "success"
-                        } else "invalid"
-
-
-                    }
+                    modifier = Modifier.padding(60.dp)
+                        .border(
+                            shape = RoundedCornerShape(15.dp),
+                            color = Color.Black,
+                            width = 1.dp
+                        )
                 ) {
-                    if (questionProgress < questions.size - 1) nextOrDoneButton(
-                        Icons.Filled.ArrowForward,
-                        "Next"
-                    )
-                    else nextOrDoneButton(Icons.Filled.Done, "Done")
-                }
-                LinearProgressIndicator(
-                    modifier = Modifier.fillMaxWidth().height(20.dp),
-                    progress = questionProgress.div(questions.size.toFloat())
-                        .plus(1.div(questions.size.toFloat()))
-                )
-                if (valid != "question") LaunchedEffect(valid) {
-                    delay(500)
-                    if (questionProgress < questions.size - 1) {
-                        questionProgress++
-                        selectedAnswer = 1
-                    } else {
-                        // Go to the score section
-                        navigator.navigate("/score/$score out of ${questions.size}")
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        modifier = Modifier.padding(horizontal = 10.dp)
+                    ) {
+                        Text(
+                            modifier = Modifier.padding(all = 10.dp),
+                            text = questions[questionProgress].label,
+                            fontSize = 25.sp,
+                            textAlign = TextAlign.Center
+                        )
                     }
-                    valid = "question"
+                }
+
+                //List of answer
+                Column(modifier = Modifier.selectableGroup()) {
+                    println("question screen: ${questions.size}")
+                    questions[questionProgress].answers.forEach { answer ->
+                        Card(
+                            shape = RoundedCornerShape(15.dp),
+                            modifier = Modifier
+                                .padding(horizontal = 16.dp, vertical = 5.dp)
+                                .border(
+                                    shape = RoundedCornerShape(15.dp),
+                                    color = Color.Black,
+                                    width = 1.dp
+                                )
+                                .background(Color.Transparent)
+                                .width(400.dp)
+                        ) {
+                            Row(
+                                modifier = Modifier.padding(horizontal = 16.dp)
+                                    .clickable { selectedAnswer = answer.id }
+                                    .width(400.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+
+                                ) {
+
+                                RadioButton(
+                                    modifier = Modifier.padding(end = 16.dp),
+                                    selected = (selectedAnswer == answer.id),
+                                    onClick = { selectedAnswer = answer.id }
+                                )
+                                Text(text = answer.label)
+                            }
+
+                        }
+                    }
+                }
+                Column(
+                    modifier = Modifier.fillMaxHeight(),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Bottom
+                ) {
+                    //valid button
+                    Button(
+                        modifier = Modifier.padding(bottom = 20.dp),
+                        shape = RoundedCornerShape(15.dp),
+                        onClick = {
+                            valid =
+                                if (selectedAnswer == questions[questionProgress].correctAnswerId) {
+                                    score++
+                                    "success"
+                                } else "invalid"
+
+
+                        }
+                    ) {
+                        if (questionProgress < questions.size - 1) nextOrDoneButton(
+                            Icons.Filled.ArrowForward,
+                            "Next"
+                        )
+                        else nextOrDoneButton(Icons.Filled.Done, "Done")
+                    }
+                    LinearProgressIndicator(
+                        modifier = Modifier.fillMaxWidth().height(20.dp),
+                        progress = questionProgress.div(questions.size.toFloat())
+                            .plus(1.div(questions.size.toFloat()))
+                    )
+                    if (valid != "question") LaunchedEffect(valid) {
+                        delay(500)
+                        if (questionProgress < questions.size - 1) {
+                            questionProgress++
+                            selectedAnswer = 1
+                        } else {
+                            // Go to the score section
+                            navigator.navigate("/score/$score out of ${questions.size}")
+                        }
+                        valid = "question"
+                    }
                 }
             }
         }
