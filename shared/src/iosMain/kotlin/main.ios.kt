@@ -1,4 +1,5 @@
 
+import com.example.App
 import moe.tlaster.precompose.PreComposeApplication
 import platform.UIKit.UIViewController
 
